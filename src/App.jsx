@@ -8,14 +8,11 @@ import {
   Search,
   Bell,
   TrendingUp,
-  ShoppingCart,
   MessageCircle,
   Star,
   Camera,
   Filter,
-  DollarSign,
   Users,
-  Truck,
   Shield,
   Menu,
   Home,
@@ -31,8 +28,6 @@ const LocalHarvestWireframes = () => { // This is the start of the function body
   const [currentScreen, setCurrentScreen] = useState('splash');
   // State to toggle password visibility in login/signup forms
   const [showPassword, setShowPassword] = useState(false);
-  // State for form data (though not actively used for submission in this wireframe)
-  const [formData, setFormData] = useState({});
 
   // Object mapping screen keys to their descriptive names for navigation buttons
   const screens = {
@@ -140,7 +135,7 @@ const LocalHarvestWireframes = () => { // This is the start of the function body
             <input type="checkbox" className="mr-2 rounded text-green-600 focus:ring-green-500" />
             <span>Remember me</span>
           </label>
-          <a href="#" className="text-green-600 font-medium hover:underline">Forgot password?</a>
+          <button type="button" className="text-green-600 font-medium hover:underline" onClick={() => {/* handle forgot password logic here, e.g., show a modal */}}>Forgot password?</button>
         </div>
 
         {/* Login Button */}
@@ -403,7 +398,7 @@ const LocalHarvestWireframes = () => { // This is the start of the function body
         </div>
       </div>
 
-      // ... (inside MarketPrices component)
+      {/* ... (inside MarketPrices component) */}
 
       {/* Price List */}
       <div className="p-4 space-y-3">
@@ -421,7 +416,7 @@ const LocalHarvestWireframes = () => { // This is the start of the function body
             <h3 className="font-semibold text-lg text-gray-800">{item.name}</h3>
             <p className="text-sm text-gray-600">per kg</p>
           </div>
-          // ... inside MarketPrices component
+          {/* ... inside MarketPrices component */}
 <div className="text-right flex items-center">
   <p className="text-xl font-bold text-gray-900 mr-2">{item.price}</p>
   <span className={`text-sm font-medium flex items-center ${item.color}`}>
@@ -433,11 +428,10 @@ const LocalHarvestWireframes = () => { // This is the start of the function body
       ))}
     </div>
 
-// ...
       {/* Bottom Navigation is rendered by the main component */}
     </div>
   );
-
+{/* ... */}
   // --- Component for the Find Buyers Screen ---
   const BuyersScreen = () => (
     <div className="bg-gray-100 min-h-screen">
